@@ -4,7 +4,7 @@
   become: root
 
   tasks:
-    - name: Intsall Nginx
+    - name: Install Nginx
       apt:
         name: nginx
         state: present
