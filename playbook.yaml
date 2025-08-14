@@ -1,0 +1,14 @@
+---
+- name: Install and starting nginx
+  hosts: all # it can be [dbServers] or [webServers] or any single/multiple ip address
+  become: root
+
+  tasks:
+    - name: Intsall Nginx
+      apt:
+        name: nginx
+        state: present
+    - name: Start Nginx
+      service:
+        name: nginx
+        state: started
